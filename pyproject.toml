@@ -8,7 +8,10 @@ version = "0.1.0"
 description = "Lokalna aplikacija za osobne financije: ponavljajuće stavke, usklađivanje s izvodom i projekcija stanja"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = ["typer>=0.12", "rich>=13"]
+
+[project.scripts]
+fin = "financije.cli:app"
 
 [project.optional-dependencies]
 dev = ["pytest>=8"]

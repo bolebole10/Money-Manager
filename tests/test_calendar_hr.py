@@ -3,9 +3,15 @@ from datetime import date
 import pytest
 
 from financije.core.calendar_hr import (
-    add_months, easter, holidays, is_workday, last_day_of_month, next_workday,
+    add_months, easter, holidays, is_workday, last_day_of_month, month_name, next_workday,
     parse_date, prev_workday,
 )
+
+
+def test_month_name():
+    assert month_name(1) == "siječanj"
+    assert month_name(10) == "listopad"
+    assert month_name(12) == "prosinac"
 
 
 @pytest.mark.parametrize("year,d", [

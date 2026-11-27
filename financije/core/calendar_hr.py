@@ -25,6 +25,17 @@ _FIXED_HOLIDAYS = [
 ]
 
 
+MONTH_NAMES = [
+    "siječanj", "veljača", "ožujak", "travanj", "svibanj", "lipanj",
+    "srpanj", "kolovoz", "rujan", "listopad", "studeni", "prosinac",
+]
+
+
+def month_name(month: int) -> str:
+    """Naziv mjeseca na hrvatskom (1 -> 'siječanj')."""
+    return MONTH_NAMES[month - 1]
+
+
 def easter(year: int) -> date:
     """Datum Uskrsa (gregorijanski kalendar), anonimni algoritam Meeus/Jones/Butcher."""
     a = year % 19
